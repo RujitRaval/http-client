@@ -22,12 +22,12 @@ def login():
         login_api_endpoint = "http://localhost:5000/api/login"
 
         # Setting authentication payload
-        auth_payload = {"username": "gest", "password": "guest"}
+        auth_payload = {"username": "guest", "password": "guest"}
 
         # HTTP POST request to the Login API with authentication payload
         response = requests.post(url=login_api_endpoint, data=json.dumps(auth_payload).encode())
 
-        if not response.status_code == 401:
+        if response.status_code == 401:
             print("Invalid credentials.")
             exit()
         if not response.text.startswith('{"access_token": '):
