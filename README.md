@@ -8,7 +8,7 @@ To run the API client:
 
 2. Clone this repository:
 ```
-$ git clone https://github.com/secberus/homework-api
+$ git clone https://github.com/RujitRaval/http-client
 ```
 
 3. Run the server
